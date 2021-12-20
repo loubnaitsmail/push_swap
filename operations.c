@@ -55,7 +55,7 @@ void	ft_pa(t_stack *a, t_stack *b)
 {
 	long	value;
 
-	if (b != NULL)
+	//if (b != NULL)
 	{
 		value = remove_from_top(b);
 		add_to_top(a, value);

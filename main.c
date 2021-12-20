@@ -150,6 +150,17 @@ void	build_stack(t_stack *a, int ac, char **av)
 		ft_error();
 }
 
+void	divid_list(t_stack *a, t_stack *b, int size)
+{
+	int medium = size / 2;
+	while (size > medium)
+	{
+		ft_pb(a, b);
+		size--;
+	}
+
+}
+
 int	main(int ac, char **av)
 {
 	t_stack	a;
@@ -166,12 +177,20 @@ int	main(int ac, char **av)
 	count = count_nbr(&a);
 	printf("count stack = %d\n", count);
 	
+	divid_list(&a, &b, count);
+
+	printf("stack a\n");
+	print_stack(a);
+	printf("stack b\n");
+	print_stack(b);
+
+
+
 	if (!sorted(&a))
-		printf("Not sorted\n");
+		printf("a is not sorted\n");
 	else
-		printf("is sorted\n");
+		printf("a is sorted\n");
 	//ft_rra(&a);
-	//print_stack(a);
 
 	return(0);
 }
