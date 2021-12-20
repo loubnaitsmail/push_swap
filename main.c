@@ -191,6 +191,6 @@ int	main(int ac, char **av)
 	else
 		printf("a is sorted\n");
 	//ft_rra(&a);
-
+	//free
 	return(0);
 }
