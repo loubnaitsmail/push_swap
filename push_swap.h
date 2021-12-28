@@ -17,16 +17,20 @@ typedef struct	s_stack
 {
 	t_elem	*first;
 	t_elem	*last;
+	int		size;
 }				t_stack;
 
-void	ft_sa(t_stack *a);
 void	ft_pa(t_stack *a, t_stack *b);
+void	ft_sa(t_stack *a);
+void	ft_ss(t_stack *a, t_stack *b);
 void	ft_pb(t_stack *a, t_stack *b);
 void	ft_ra(t_stack *a);
 void	ft_rb(t_stack *b);
+void	ft_rrb(t_stack *b);
 void	ft_rra(t_stack *a);
 
-void	print_stack(t_stack a);
+void	print_stack(t_stack *a);
+void	print_stacks(t_stack *a, t_stack *b);
 long	remove_from_top(t_stack *a);
 long	remove_from_end(t_stack *a);
 void	add_to_top(t_stack *a, long val);

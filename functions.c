@@ -5,19 +5,25 @@ int	check_double(t_stack *a)
 	t_elem	*tmp1;
 	t_elem	*tmp2;
 	int		num;
+	int size;
+	int size2;
 
+	size = 0;
 	tmp1 = a->first;
-	while (tmp1)
+	while (size < a->size)
 	{
 		num = tmp1->value;
 		tmp2 = tmp1;
-		while (tmp2->next)
+		size2 = size + 1;
+		while (size2 < a->size)
 		{
 			if (num == tmp2->next->value)
 				return (0);
 			tmp2 = tmp2->next;
+			size2++;
 		}
 		tmp1 = tmp1->next;
+		size ++;
 	}
 	return(1);
 }
